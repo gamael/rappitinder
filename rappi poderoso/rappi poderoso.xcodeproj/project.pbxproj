@@ -12,9 +12,11 @@
 		60623F03217A39D10076BF5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60623F01217A39D10076BF5A /* Main.storyboard */; };
 		60623F05217A39D10076BF5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60623F04217A39D10076BF5A /* Assets.xcassets */; };
 		60623F08217A39D10076BF5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60623F06217A39D10076BF5A /* LaunchScreen.storyboard */; };
+		9E203CAFF496ECC474F7027E /* Pods_rappi_poderoso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44233643677E65B605CD880F /* Pods_rappi_poderoso.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44233643677E65B605CD880F /* Pods_rappi_poderoso.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rappi_poderoso.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60623EFA217A39D10076BF5A /* rappi poderoso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rappi poderoso.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60623EFD217A39D10076BF5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60623EFF217A39D10076BF5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		60623F04217A39D10076BF5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60623F07217A39D10076BF5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60623F09217A39D10076BF5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F98FB16DA1C7E653F4A225B /* Pods-rappi poderoso.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rappi poderoso.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rappi poderoso/Pods-rappi poderoso.debug.xcconfig"; sourceTree = "<group>"; };
+		C227CA4DC6A12EF007D6BA69 /* Pods-rappi poderoso.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rappi poderoso.release.xcconfig"; path = "Pods/Target Support Files/Pods-rappi poderoso/Pods-rappi poderoso.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E203CAFF496ECC474F7027E /* Pods_rappi_poderoso.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				60623EFC217A39D10076BF5A /* rappi poderoso */,
 				60623EFB217A39D10076BF5A /* Products */,
+				8129054FF7211D95E6688A17 /* Pods */,
+				9A6CC2416E218992A4A45417 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = "rappi poderoso";
 			sourceTree = "<group>";
 		};
+		8129054FF7211D95E6688A17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F98FB16DA1C7E653F4A225B /* Pods-rappi poderoso.debug.xcconfig */,
+				C227CA4DC6A12EF007D6BA69 /* Pods-rappi poderoso.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9A6CC2416E218992A4A45417 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44233643677E65B605CD880F /* Pods_rappi_poderoso.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60623F0C217A39D10076BF5A /* Build configuration list for PBXNativeTarget "rappi poderoso" */;
 			buildPhases = (
+				B91EAEE1A29E3CB8783CB796 /* [CP] Check Pods Manifest.lock */,
 				60623EF6217A39D10076BF5A /* Sources */,
 				60623EF7217A39D10076BF5A /* Frameworks */,
 				60623EF8217A39D10076BF5A /* Resources */,
+				5074FFDFED80EA70B21AECD4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +156,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5074FFDFED80EA70B21AECD4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-rappi poderoso/Pods-rappi poderoso-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rappi poderoso/Pods-rappi poderoso-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B91EAEE1A29E3CB8783CB796 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rappi poderoso-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		60623EF6217A39D10076BF5A /* Sources */ = {
@@ -260,6 +333,7 @@
 		};
 		60623F0D217A39D10076BF5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F98FB16DA1C7E653F4A225B /* Pods-rappi poderoso.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "rappi poderoso/Info.plist";
@@ -272,6 +346,7 @@
 		};
 		60623F0E217A39D10076BF5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C227CA4DC6A12EF007D6BA69 /* Pods-rappi poderoso.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "rappi poderoso/Info.plist";
