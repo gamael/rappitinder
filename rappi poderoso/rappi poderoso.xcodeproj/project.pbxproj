@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		60623EFE217A39D10076BF5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60623EFD217A39D10076BF5A /* AppDelegate.swift */; };
-		60623F00217A39D10076BF5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60623EFF217A39D10076BF5A /* ViewController.swift */; };
+		60623F00217A39D10076BF5A /* TinderRappiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60623EFF217A39D10076BF5A /* TinderRappiVC.swift */; };
 		60623F03217A39D10076BF5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60623F01217A39D10076BF5A /* Main.storyboard */; };
 		60623F05217A39D10076BF5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60623F04217A39D10076BF5A /* Assets.xcassets */; };
 		60623F08217A39D10076BF5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60623F06217A39D10076BF5A /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		44233643677E65B605CD880F /* Pods_rappi_poderoso.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rappi_poderoso.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60623EFA217A39D10076BF5A /* rappi poderoso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rappi poderoso.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60623EFD217A39D10076BF5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		60623EFF217A39D10076BF5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		60623EFF217A39D10076BF5A /* TinderRappiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderRappiVC.swift; sourceTree = "<group>"; };
 		60623F02217A39D10076BF5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		60623F04217A39D10076BF5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60623F07217A39D10076BF5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +40,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6018756B217A97A7008E4329 /* Vista */ = {
+			isa = PBXGroup;
+			children = (
+				60623F01217A39D10076BF5A /* Main.storyboard */,
+				60623F06217A39D10076BF5A /* LaunchScreen.storyboard */,
+			);
+			name = Vista;
+			sourceTree = "<group>";
+		};
+		6018756C217A97C1008E4329 /* Controlador */ = {
+			isa = PBXGroup;
+			children = (
+				60623EFF217A39D10076BF5A /* TinderRappiVC.swift */,
+			);
+			name = Controlador;
+			sourceTree = "<group>";
+		};
+		6018756D217A97E1008E4329 /* Recursos */ = {
+			isa = PBXGroup;
+			children = (
+				6018756E217A97EF008E4329 /* Imágenes */,
+				6018756F217A9802008E4329 /* Configuración */,
+			);
+			name = Recursos;
+			sourceTree = "<group>";
+		};
+		6018756E217A97EF008E4329 /* Imágenes */ = {
+			isa = PBXGroup;
+			children = (
+				60623F04217A39D10076BF5A /* Assets.xcassets */,
+			);
+			name = "Imágenes";
+			sourceTree = "<group>";
+		};
+		6018756F217A9802008E4329 /* Configuración */ = {
+			isa = PBXGroup;
+			children = (
+				60623EFD217A39D10076BF5A /* AppDelegate.swift */,
+				60623F09217A39D10076BF5A /* Info.plist */,
+			);
+			name = "Configuración";
+			sourceTree = "<group>";
+		};
 		60623EF1217A39D10076BF5A = {
 			isa = PBXGroup;
 			children = (
@@ -61,12 +104,9 @@
 		60623EFC217A39D10076BF5A /* rappi poderoso */ = {
 			isa = PBXGroup;
 			children = (
-				60623EFD217A39D10076BF5A /* AppDelegate.swift */,
-				60623EFF217A39D10076BF5A /* ViewController.swift */,
-				60623F01217A39D10076BF5A /* Main.storyboard */,
-				60623F04217A39D10076BF5A /* Assets.xcassets */,
-				60623F06217A39D10076BF5A /* LaunchScreen.storyboard */,
-				60623F09217A39D10076BF5A /* Info.plist */,
+				6018756C217A97C1008E4329 /* Controlador */,
+				6018756B217A97A7008E4329 /* Vista */,
+				6018756D217A97E1008E4329 /* Recursos */,
 			);
 			path = "rappi poderoso";
 			sourceTree = "<group>";
@@ -201,7 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60623F00217A39D10076BF5A /* ViewController.swift in Sources */,
+				60623F00217A39D10076BF5A /* TinderRappiVC.swift in Sources */,
 				60623EFE217A39D10076BF5A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
