@@ -25,7 +25,6 @@ class TinderRappiVC: UIViewController {
     
     
     
-    
     //MARK: -Funciones
     //MARK: Ciclo de vida
     override func viewDidLoad() {
@@ -35,12 +34,10 @@ class TinderRappiVC: UIViewController {
     }
     
     
-    
     private func getProductos() {
         tinderServicios.GETproductosTinderPeticion(completion: { productos in
             self.productosServidor = productos
             self.mostrarProductos()
-            
         })
     }
     
@@ -57,7 +54,6 @@ class TinderRappiVC: UIViewController {
             self.spinner.hide()
             
         }
-        
     }
     
     
@@ -71,10 +67,7 @@ class TinderRappiVC: UIViewController {
         } else {
             return nil
         }
-        
-        
     }
-    
     
     
     
@@ -84,6 +77,9 @@ class TinderRappiVC: UIViewController {
         productosGustados.append((productosServidor?[indice-1]._id)!)
         mostrarProductos()
         productosGustadosLabel.text = "Te han gustado \(productosGustados.count) productos"
+        if productosGustados.count == 10 {
+            tinderServicios.POSTproductosGustadosPeticion(productosGustados: productosGustados)
+        }
     }
     
     @IBAction func presionoNoGusta(_ sender: UIButton) {
