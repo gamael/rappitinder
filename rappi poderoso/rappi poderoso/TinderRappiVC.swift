@@ -9,6 +9,10 @@
 import UIKit
 
 class TinderRappiVC: UIViewController {
+    //MARK: -Variables
+    private let spinner = Spinner()
+    
+    
     
     //MARK: -Outlets
     @IBOutlet weak var productosGustadosLabel: UILabel!
@@ -21,6 +25,7 @@ class TinderRappiVC: UIViewController {
     //MARK: -Funciones
     override func viewDidLoad() {
         super.viewDidLoad()
+        spinner.show(view: view)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
