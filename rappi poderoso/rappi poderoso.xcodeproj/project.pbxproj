@@ -13,6 +13,7 @@
 		60623F03217A39D10076BF5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60623F01217A39D10076BF5A /* Main.storyboard */; };
 		60623F05217A39D10076BF5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60623F04217A39D10076BF5A /* Assets.xcassets */; };
 		60623F08217A39D10076BF5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60623F06217A39D10076BF5A /* LaunchScreen.storyboard */; };
+		60B4E3DA217AE21E007655F3 /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B4E3D9217AE21E007655F3 /* loginVC.swift */; };
 		9E203CAFF496ECC474F7027E /* Pods_rappi_poderoso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44233643677E65B605CD880F /* Pods_rappi_poderoso.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		60623F04217A39D10076BF5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60623F07217A39D10076BF5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60623F09217A39D10076BF5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60B4E3D9217AE21E007655F3 /* loginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
 		7F98FB16DA1C7E653F4A225B /* Pods-rappi poderoso.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rappi poderoso.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rappi poderoso/Pods-rappi poderoso.debug.xcconfig"; sourceTree = "<group>"; };
 		C227CA4DC6A12EF007D6BA69 /* Pods-rappi poderoso.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rappi poderoso.release.xcconfig"; path = "Pods/Target Support Files/Pods-rappi poderoso/Pods-rappi poderoso.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				60623EFF217A39D10076BF5A /* TinderRappiVC.swift */,
+				60B4E3D9217AE21E007655F3 /* loginVC.swift */,
 			);
 			name = Controlador;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			files = (
 				60187572217AA600008E4329 /* Extensiones.swift in Sources */,
 				60623F00217A39D10076BF5A /* TinderRappiVC.swift in Sources */,
+				60B4E3DA217AE21E007655F3 /* loginVC.swift in Sources */,
 				60623EFE217A39D10076BF5A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
