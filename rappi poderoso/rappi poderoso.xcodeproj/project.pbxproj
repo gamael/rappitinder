@@ -10,6 +10,8 @@
 		60187572217AA600008E4329 /* Extensiones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60187571217AA600008E4329 /* Extensiones.swift */; };
 		602038D9217B7BE9005EBA3A /* Servicios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602038D8217B7BE9005EBA3A /* Servicios.swift */; };
 		602038DB217B8846005EBA3A /* Registro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602038DA217B8846005EBA3A /* Registro.swift */; };
+		602038DD217B8B61005EBA3A /* Corredor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602038DC217B8B61005EBA3A /* Corredor.swift */; };
+		602038DF217B8BEB005EBA3A /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602038DE217B8BEB005EBA3A /* Producto.swift */; };
 		60623EFE217A39D10076BF5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60623EFD217A39D10076BF5A /* AppDelegate.swift */; };
 		60623F00217A39D10076BF5A /* TinderRappiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60623EFF217A39D10076BF5A /* TinderRappiVC.swift */; };
 		60623F03217A39D10076BF5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60623F01217A39D10076BF5A /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 		60187571217AA600008E4329 /* Extensiones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensiones.swift; sourceTree = "<group>"; };
 		602038D8217B7BE9005EBA3A /* Servicios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Servicios.swift; sourceTree = "<group>"; };
 		602038DA217B8846005EBA3A /* Registro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registro.swift; sourceTree = "<group>"; };
+		602038DC217B8B61005EBA3A /* Corredor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Corredor.swift; sourceTree = "<group>"; };
+		602038DE217B8BEB005EBA3A /* Producto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
 		60623EFA217A39D10076BF5A /* rappi poderoso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rappi poderoso.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60623EFD217A39D10076BF5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60623EFF217A39D10076BF5A /* TinderRappiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderRappiVC.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				602038D7217B7B64005EBA3A /* Servicios */,
+				602038E0217B8C05005EBA3A /* Entidades */,
 			);
 			name = Modelo;
 			sourceTree = "<group>";
@@ -115,6 +120,15 @@
 				602038D8217B7BE9005EBA3A /* Servicios.swift */,
 			);
 			name = Servicios;
+			sourceTree = "<group>";
+		};
+		602038E0217B8C05005EBA3A /* Entidades */ = {
+			isa = PBXGroup;
+			children = (
+				602038DC217B8B61005EBA3A /* Corredor.swift */,
+				602038DE217B8BEB005EBA3A /* Producto.swift */,
+			);
+			name = Entidades;
 			sourceTree = "<group>";
 		};
 		60623EF1217A39D10076BF5A = {
@@ -280,7 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				60187572217AA600008E4329 /* Extensiones.swift in Sources */,
+				602038DF217B8BEB005EBA3A /* Producto.swift in Sources */,
 				60623F00217A39D10076BF5A /* TinderRappiVC.swift in Sources */,
+				602038DD217B8B61005EBA3A /* Corredor.swift in Sources */,
 				602038DB217B8846005EBA3A /* Registro.swift in Sources */,
 				602038D9217B7BE9005EBA3A /* Servicios.swift in Sources */,
 				60B4E3DA217AE21E007655F3 /* loginVC.swift in Sources */,

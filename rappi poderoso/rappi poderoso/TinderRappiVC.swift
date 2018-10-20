@@ -12,7 +12,8 @@ import UIKit
 class TinderRappiVC: UIViewController {
     //MARK: -Variables
     private let spinner = Spinner()
-    
+    private let tinderServicios =  TinderServicios()
+    private var productos: Producto?
     
     
     //MARK: -Outlets
@@ -28,12 +29,20 @@ class TinderRappiVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.spinner.show(view: self.view)
-        
+        getProductos()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         establecerImagen(urlImagen: "https://www.revistamoi.com/wp-content/uploads/2017/02/rappi.jpg")
     }
+    
+    func getProductos() {
+        tinderServicios.GETproductosTinder()
+    }
+    
+//    func setProductos() {
+//        
+//    }
     
     func establecerImagen(urlImagen url: String) {
         

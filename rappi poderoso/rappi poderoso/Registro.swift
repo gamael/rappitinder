@@ -8,10 +8,16 @@
 
 import Foundation
 
-struct Servicios {
+struct Registro {
     private init() {}
     
-    static let URLServicios = "https://guarded-basin-95372.herokuapp.com/random/"
-    static let URLImagenes = "http://img.dev.rappi.com/products/high/"
-    
+    struct Servicios {
+        private init() {}
+        
+        static let URLServicios = "https://rappi-tinder-dev.herokuapp.com/"
+        static let URLImagenes = "http://img.dev.rappi.com/products/high/"
+        
+    }
 }
+
+
