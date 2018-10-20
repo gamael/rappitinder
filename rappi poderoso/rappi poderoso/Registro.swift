@@ -11,6 +11,15 @@ import Foundation
 struct Registro {
     private init() {}
     
+    struct Configuraciones {
+        private init() {}
+        
+        static let productosTinderDefecto = 25
+        static let productosRecomendadosDefecto = 30
+        
+    }
+    
+    
     struct Servicios {
         private init() {}
         

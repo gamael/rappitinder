@@ -13,14 +13,15 @@ class TinderRappiVC: UIViewController {
     //MARK: -Variables
     private let spinner = Spinner()
     private let tinderServicios =  TinderServicios()
-    private var productos: Producto?
+    private var productosServidor: [Producto]?
+    private var indice = 0
+    private var productosGustados = [String]()
     
     
     //MARK: -Outlets
     @IBOutlet weak var productosGustadosLabel: UILabel!
     @IBOutlet weak var nombreProductoLabel: UILabel!
     @IBOutlet weak var productoImageView: UIImageView!
-    
     
     
     
@@ -32,44 +33,59 @@ class TinderRappiVC: UIViewController {
         getProductos()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        establecerImagen(urlImagen: "https://www.revistamoi.com/wp-content/uploads/2017/02/rappi.jpg")
+    
+    private func getProductos() {
+        tinderServicios.GETproductosTinderPeticion(completion: { productos in
+            self.productosServidor = productos
+            self.mostrarProductos()
+        })
     }
     
-    func getProductos() {
-        tinderServicios.GETproductosTinder()
-    }
-    
-//    func setProductos() {
-//        
-//    }
-    
-    func establecerImagen(urlImagen url: String) {
-        
-        let url2 = URL(string: url)
-        let data = try? Data(contentsOf: url2!)
-        
-        if let imageData = data {
-            let image = UIImage(data: imageData)
-            DispatchQueue.main.async {
-                self.productoImageView.image = image
-            }
-            spinner.hide()
+    private func mostrarProductos() {
+        //La primera vez que se ejecuta, ya está el spinner
+        if indice != 0 {
+            spinner.show(view: view)
         }
         
-        
-        
+        DispatchQueue.main.async {
+            self.nombreProductoLabel.text = self.productosServidor?[self.indice].name ?? "Sin Nombre"
+            self.productoImageView.image = self.getImagen(nombreImagen: (self.productosServidor?[self.indice].image)!) ?? UIImage(named: "sinImagen")!
+            self.indice += 1
+            self.spinner.hide()
+            
+        }
     }
     
+    
+    func getImagen(nombreImagen nombre: String) -> UIImage? {
+        
+        let urlTexto = Registro.Servicios.URLImagenes + nombre
+        let data = try? Data(contentsOf: URL(string: urlTexto)!)
+        
+        if let imageData = data {
+            return UIImage(data: imageData)
+        } else {
+            return nil
+        }
+    }
     
     
     
     
     //MARK: -Acciones
     @IBAction func presionoGusta(_ sender: UIButton) {
+        productosGustados.append((productosServidor?[indice-1]._id)!)
+        mostrarProductos()
+        productosGustadosLabel.text = "Te han gustado \(productosGustados.count) productos"
+        if productosGustados.count == 10 {
+            tinderServicios.POSTproductosGustadosPeticion(productosGustados: productosGustados)
+            performSegue(withIdentifier: "mostrarRecomendados", sender: nil)
+        }
+        
     }
     
     @IBAction func presionoNoGusta(_ sender: UIButton) {
+        mostrarProductos()
     }
 
 }
