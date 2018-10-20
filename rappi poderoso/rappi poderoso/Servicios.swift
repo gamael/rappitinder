@@ -51,4 +51,27 @@ class TinderServicios {
     
 }
 
+class RecomendadosServicios {
+    
+    func GETproductosRecomendadosPeticion( completion: @escaping ([Producto]) -> Void ) {
+        let urlPeticion = "\(Registro.Servicios.URLServicios)recommendations/\(Registro.Configuraciones.productosRecomendadosDefecto)"
+        Alamofire.request(urlPeticion)
+            .validate(statusCode: 200..<300)
+            .responseJSON {response in
+                // response serialization result
+                if let jsonArray = response.result.value {
+                    var productosRetorno: [Producto] = [Producto]()
+                    for json in jsonArray as! [[String : Any]] {
+                        //productosRetorno.append(Producto.init(json: json)!)
+                        if let producto = Producto.init(json: json) {
+                            productosRetorno.append(producto)
+                        }
+                    }
+                    completion(productosRetorno)
+                }
+        }
+    }
+
+}
+
 
