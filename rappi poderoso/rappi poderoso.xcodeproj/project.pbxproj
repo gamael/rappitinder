@@ -62,13 +62,13 @@
 		6018756D217A97E1008E4329 /* Recursos */ = {
 			isa = PBXGroup;
 			children = (
-				6018756E217A97EF008E4329 /* Imágenes */,
-				6018756F217A9802008E4329 /* Configuración */,
+				6018756E217A97EF008E4329 /* Imágenes */,
+				6018756F217A9802008E4329 /* Configuración */,
 			);
 			name = Recursos;
 			sourceTree = "<group>";
 		};
-		6018756E217A97EF008E4329 /* Imágenes */ = {
+		6018756E217A97EF008E4329 /* Imágenes */ = {
 			isa = PBXGroup;
 			children = (
 				60623F04217A39D10076BF5A /* Assets.xcassets */,
@@ -76,7 +76,7 @@
 			name = "Imágenes";
 			sourceTree = "<group>";
 		};
-		6018756F217A9802008E4329 /* Configuración */ = {
+		6018756F217A9802008E4329 /* Configuración */ = {
 			isa = PBXGroup;
 			children = (
 				60623EFD217A39D10076BF5A /* AppDelegate.swift */,
@@ -217,10 +217,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-rappi poderoso/Pods-rappi poderoso-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
