@@ -33,11 +33,16 @@ class TinderRappiVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        establecerImagen(urlImagen: "https://www.revistamoi.com/wp-content/uploads/2017/02/rappi.jpg")
+        
     }
     
     func getProductos() {
-        tinderServicios.GETproductosTinder()
+        tinderServicios.GETproductosTinderPeticion(completion: { producto in
+            if let p = producto {
+                self.establecerImagen(urlImagen: p.image)
+            }
+            
+        })
     }
     
 //    func setProductos() {
@@ -46,7 +51,8 @@ class TinderRappiVC: UIViewController {
     
     func establecerImagen(urlImagen url: String) {
         
-        let url2 = URL(string: url)
+        let url1 = Registro.Servicios.URLImagenes + url
+        let url2 = URL(string: url1)
         let data = try? Data(contentsOf: url2!)
         
         if let imageData = data {
@@ -67,9 +73,13 @@ class TinderRappiVC: UIViewController {
     
     //MARK: -Acciones
     @IBAction func presionoGusta(_ sender: UIButton) {
+        spinner.show(view: view)
+        getProductos()
     }
     
     @IBAction func presionoNoGusta(_ sender: UIButton) {
+        spinner.show(view: view)
+        getProductos()
     }
 
 }

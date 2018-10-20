@@ -11,13 +11,27 @@ import Alamofire
 
 class TinderServicios {
     
-    func GETproductosTinder() {
+  
+    
+    
+    func GETproductosTinderPeticion( completion: @escaping (Producto?) -> Void ) {
         let urlTinder = "\(Registro.Servicios.URLServicios)random/one"
         Alamofire.request(urlTinder).responseJSON {response in
                                  // response serialization result
             if let json = response.result.value {
                 print("JSON: \(json)") // serialized json response
+                let miProducto = Producto.init(json: json as! [String : Any])
+                if let p = miProducto {
+                    completion(p)
+                }
+                else {
+                    completion(nil)
+                }
+                
             }
+            
+            
+            
             
             
         }
