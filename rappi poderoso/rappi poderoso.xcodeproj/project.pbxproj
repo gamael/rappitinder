@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60187572217AA600008E4329 /* Extensiones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60187571217AA600008E4329 /* Extensiones.swift */; };
 		60623EFE217A39D10076BF5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60623EFD217A39D10076BF5A /* AppDelegate.swift */; };
 		60623F00217A39D10076BF5A /* TinderRappiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60623EFF217A39D10076BF5A /* TinderRappiVC.swift */; };
 		60623F03217A39D10076BF5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60623F01217A39D10076BF5A /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		44233643677E65B605CD880F /* Pods_rappi_poderoso.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rappi_poderoso.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60187571217AA600008E4329 /* Extensiones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensiones.swift; sourceTree = "<group>"; };
 		60623EFA217A39D10076BF5A /* rappi poderoso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rappi poderoso.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60623EFD217A39D10076BF5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60623EFF217A39D10076BF5A /* TinderRappiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderRappiVC.swift; sourceTree = "<group>"; };
@@ -60,13 +62,13 @@
 		6018756D217A97E1008E4329 /* Recursos */ = {
 			isa = PBXGroup;
 			children = (
-				6018756E217A97EF008E4329 /* Imágenes */,
-				6018756F217A9802008E4329 /* Configuración */,
+				6018756E217A97EF008E4329 /* Imágenes */,
+				6018756F217A9802008E4329 /* Configuración */,
 			);
 			name = Recursos;
 			sourceTree = "<group>";
 		};
-		6018756E217A97EF008E4329 /* Imágenes */ = {
+		6018756E217A97EF008E4329 /* Imágenes */ = {
 			isa = PBXGroup;
 			children = (
 				60623F04217A39D10076BF5A /* Assets.xcassets */,
@@ -74,13 +76,21 @@
 			name = "Imágenes";
 			sourceTree = "<group>";
 		};
-		6018756F217A9802008E4329 /* Configuración */ = {
+		6018756F217A9802008E4329 /* Configuración */ = {
 			isa = PBXGroup;
 			children = (
 				60623EFD217A39D10076BF5A /* AppDelegate.swift */,
 				60623F09217A39D10076BF5A /* Info.plist */,
 			);
 			name = "Configuración";
+			sourceTree = "<group>";
+		};
+		60187570217AA37F008E4329 /* Extensiones */ = {
+			isa = PBXGroup;
+			children = (
+				60187571217AA600008E4329 /* Extensiones.swift */,
+			);
+			name = Extensiones;
 			sourceTree = "<group>";
 		};
 		60623EF1217A39D10076BF5A = {
@@ -106,6 +116,7 @@
 			children = (
 				6018756C217A97C1008E4329 /* Controlador */,
 				6018756B217A97A7008E4329 /* Vista */,
+				60187570217AA37F008E4329 /* Extensiones */,
 				6018756D217A97E1008E4329 /* Recursos */,
 			);
 			path = "rappi poderoso";
@@ -206,10 +217,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-rappi poderoso/Pods-rappi poderoso-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -241,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60187572217AA600008E4329 /* Extensiones.swift in Sources */,
 				60623F00217A39D10076BF5A /* TinderRappiVC.swift in Sources */,
 				60623EFE217A39D10076BF5A /* AppDelegate.swift in Sources */,
 			);
@@ -297,6 +311,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -347,6 +362,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -368,6 +384,7 @@
 			baseConfigurationReference = 7F98FB16DA1C7E653F4A225B /* Pods-rappi poderoso.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				INFOPLIST_FILE = "rappi poderoso/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jeduca.rappi-poderoso";
@@ -382,6 +399,7 @@
 			baseConfigurationReference = C227CA4DC6A12EF007D6BA69 /* Pods-rappi poderoso.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				INFOPLIST_FILE = "rappi poderoso/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jeduca.rappi-poderoso";
