@@ -13,7 +13,8 @@ class TinderRappiVC: UIViewController {
     //MARK: -Variables
     private let spinner = Spinner()
     private let tinderServicios =  TinderServicios()
-    private var productos: Producto?
+    private var productosServidor: [Producto]?
+    private var indice = 0
     
     
     //MARK: -Outlets
@@ -32,37 +33,43 @@ class TinderRappiVC: UIViewController {
         getProductos()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        
-    }
     
-    func getProductos() {
-        tinderServicios.GETproductosTinderPeticion(completion: { producto in
-            if let p = producto {
-                self.establecerImagen(urlImagen: p.image)
-            }
+    
+    private func getProductos() {
+        tinderServicios.GETproductosTinderPeticion(completion: { productos in
+            self.productosServidor = productos
+            self.mostrarProductos()
             
         })
     }
     
-//    func setProductos() {
-//        
-//    }
-    
-    func establecerImagen(urlImagen url: String) {
-        
-        let url1 = Registro.Servicios.URLImagenes + url
-        let url2 = URL(string: url1)
-        let data = try? Data(contentsOf: url2!)
-        
-        if let imageData = data {
-            let image = UIImage(data: imageData)
-            DispatchQueue.main.async {
-                self.productoImageView.image = image
-            }
-            spinner.hide()
+    private func mostrarProductos() {
+        //La primera vez que se ejecuta, ya está el spinner
+        if indice != 0 {
+            spinner.show(view: view)
         }
         
+        DispatchQueue.main.async {
+            self.nombreProductoLabel.text = self.productosServidor?[self.indice].name ?? "Sin Nombre"
+            self.productoImageView.image = self.getImagen(nombreImagen: (self.productosServidor?[self.indice].image)!) ?? UIImage(named: "sinImagen")!
+            self.indice += 1
+            self.spinner.hide()
+            
+        }
+        
+    }
+    
+    
+    func getImagen(nombreImagen nombre: String) -> UIImage? {
+        
+        let urlTexto = Registro.Servicios.URLImagenes + nombre
+        let data = try? Data(contentsOf: URL(string: urlTexto)!)
+        
+        if let imageData = data {
+            return UIImage(data: imageData)
+        } else {
+            return nil
+        }
         
         
     }
@@ -73,13 +80,13 @@ class TinderRappiVC: UIViewController {
     
     //MARK: -Acciones
     @IBAction func presionoGusta(_ sender: UIButton) {
-        spinner.show(view: view)
-        getProductos()
+        
+        mostrarProductos()
     }
     
     @IBAction func presionoNoGusta(_ sender: UIButton) {
-        spinner.show(view: view)
-        getProductos()
+        
+        mostrarProductos()
     }
 
 }

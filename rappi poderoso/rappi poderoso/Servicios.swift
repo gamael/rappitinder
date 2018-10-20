@@ -11,20 +11,19 @@ import Alamofire
 
 class TinderServicios {
     
-    func GETproductosTinderPeticion( completion: @escaping (Producto?) -> Void ) {
-        let urlTinder = "\(Registro.Servicios.URLServicios)random/one"
+    func GETproductosTinderPeticion( completion: @escaping ([Producto]) -> Void ) {
+        let urlTinder = "\(Registro.Servicios.URLServicios)random/\(Registro.Configuraciones.productosTinderDefecto)"
         Alamofire.request(urlTinder).responseJSON {response in
             // response serialization result
-            if let json = response.result.value {
-                
-                let producto = Producto.init(json: json as! [String : Any])
-                if let p = producto {
-                    completion(p)
+            if let jsonArray = response.result.value {
+                var productosRetorno: [Producto] = [Producto]()
+                for json in jsonArray as! [[String : Any]] {
+                    //productosRetorno.append(Producto.init(json: json)!)
+                    if let producto = Producto.init(json: json) {
+                        productosRetorno.append(producto)
+                    }
                 }
-                else {
-                    completion(nil)
-                }
-                
+                completion(productosRetorno)
             }
         }
     }

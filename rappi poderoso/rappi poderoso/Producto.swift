@@ -16,8 +16,8 @@ struct Producto {
     var image: String
     var description: String
     var store_id: Int
-    var price: Float
-    var product_id: Int
+    var price: Int
+    var product_id: String
     
     init?(json: [String: Any]) {
         guard let _id = json["_id"] as? String,
@@ -25,8 +25,8 @@ struct Producto {
             let image = json["image"] as? String,
             let description = json["description"] as? String,
             let store_id = json["store_id"] as? Int,
-            let price = json["price"] as? Float,
-            let product_id = json["product_id"] as? Int
+            let price = json["price"] as? Int,
+            let product_id = json["product_id"] as? String
         
             else {
                 return nil
