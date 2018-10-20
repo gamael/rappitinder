@@ -10,7 +10,8 @@ import UIKit
 import RevealingSplashView
 
 class loginVC: UIViewController {
-
+    
+    //MARK: -Funciones
     override func viewDidLoad() {
         super.viewDidLoad()
         //Initialize a revealing Splash with with the iconImage, the initial size and the background color
@@ -23,5 +24,8 @@ class loginVC: UIViewController {
         revealingSplashView.startAnimation()
         
     }
-
+    
+    //MARK: -Acciones
+    @IBAction func iniciarSesion(_ sender: Any) {
+    }
 }
