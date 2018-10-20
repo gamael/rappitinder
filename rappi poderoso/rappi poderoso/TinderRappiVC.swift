@@ -31,7 +31,7 @@ class TinderRappiVC: UIViewController {
     
     
     //MARK: -Acciones
-    @IBAction func presionoGusta(_ sender: Any) {
+    @IBAction func presionoGusta(_ sender: UIButton) {
     }
     
     @IBAction func presionoNoGusta(_ sender: UIButton) {
