@@ -15,6 +15,7 @@ struct Registro {
         private init() {}
         
         static let productosTinderDefecto = 25
+        static let productosRecomendadosDefecto = 30
         
     }
     

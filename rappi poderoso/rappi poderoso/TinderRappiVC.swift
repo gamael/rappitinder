@@ -79,7 +79,9 @@ class TinderRappiVC: UIViewController {
         productosGustadosLabel.text = "Te han gustado \(productosGustados.count) productos"
         if productosGustados.count == 10 {
             tinderServicios.POSTproductosGustadosPeticion(productosGustados: productosGustados)
+            performSegue(withIdentifier: "mostrarRecomendados", sender: nil)
         }
+        
     }
     
     @IBAction func presionoNoGusta(_ sender: UIButton) {

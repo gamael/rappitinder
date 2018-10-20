@@ -12,6 +12,7 @@
 		602038DB217B8846005EBA3A /* Registro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602038DA217B8846005EBA3A /* Registro.swift */; };
 		602038DD217B8B61005EBA3A /* Corredor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602038DC217B8B61005EBA3A /* Corredor.swift */; };
 		602038DF217B8BEB005EBA3A /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602038DE217B8BEB005EBA3A /* Producto.swift */; };
+		602038E2217BCBD8005EBA3A /* RecomendadosTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602038E1217BCBD8005EBA3A /* RecomendadosTVC.swift */; };
 		60623EFE217A39D10076BF5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60623EFD217A39D10076BF5A /* AppDelegate.swift */; };
 		60623F00217A39D10076BF5A /* TinderRappiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60623EFF217A39D10076BF5A /* TinderRappiVC.swift */; };
 		60623F03217A39D10076BF5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60623F01217A39D10076BF5A /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		602038DA217B8846005EBA3A /* Registro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registro.swift; sourceTree = "<group>"; };
 		602038DC217B8B61005EBA3A /* Corredor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Corredor.swift; sourceTree = "<group>"; };
 		602038DE217B8BEB005EBA3A /* Producto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
+		602038E1217BCBD8005EBA3A /* RecomendadosTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecomendadosTVC.swift; sourceTree = "<group>"; };
 		60623EFA217A39D10076BF5A /* rappi poderoso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rappi poderoso.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60623EFD217A39D10076BF5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60623EFF217A39D10076BF5A /* TinderRappiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderRappiVC.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				60623EFF217A39D10076BF5A /* TinderRappiVC.swift */,
 				60B4E3D9217AE21E007655F3 /* loginVC.swift */,
+				602038E1217BCBD8005EBA3A /* RecomendadosTVC.swift */,
 			);
 			name = Controlador;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				602038DD217B8B61005EBA3A /* Corredor.swift in Sources */,
 				602038DB217B8846005EBA3A /* Registro.swift in Sources */,
 				602038D9217B7BE9005EBA3A /* Servicios.swift in Sources */,
+				602038E2217BCBD8005EBA3A /* RecomendadosTVC.swift in Sources */,
 				60B4E3DA217AE21E007655F3 /* loginVC.swift in Sources */,
 				60623EFE217A39D10076BF5A /* AppDelegate.swift in Sources */,
 			);
