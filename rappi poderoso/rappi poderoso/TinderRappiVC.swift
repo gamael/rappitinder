@@ -15,6 +15,7 @@ class TinderRappiVC: UIViewController {
     private let tinderServicios =  TinderServicios()
     private var productosServidor: [Producto]?
     private var indice = 0
+    private var productosGustados = [String]()
     
     
     //MARK: -Outlets
@@ -80,12 +81,12 @@ class TinderRappiVC: UIViewController {
     
     //MARK: -Acciones
     @IBAction func presionoGusta(_ sender: UIButton) {
-        
+        productosGustados.append((productosServidor?[indice-1]._id)!)
         mostrarProductos()
+        productosGustadosLabel.text = "Te han gustado \(productosGustados.count) productos"
     }
     
     @IBAction func presionoNoGusta(_ sender: UIButton) {
-        
         mostrarProductos()
     }
 
