@@ -9,8 +9,6 @@
 import UIKit
 import RevealingSplashView
 
-
-
 class loginVC: UIViewController {
     
     //MARK: -Funciones
@@ -25,12 +23,6 @@ class loginVC: UIViewController {
         //Starts animation
         revealingSplashView.startAnimation()
         
-        //Botón de facebook
-        
-        
     }
-    
-    //MARK: -Acciones
-    @IBAction func iniciarSesion(_ sender: Any) {
-    }
+   
 }
